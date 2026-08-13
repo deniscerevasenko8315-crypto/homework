@@ -1,0 +1,21 @@
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  font-family: Arial;
+}
+caption {
+  border: #000 2px solid;
+  border-bottom: none;
+  font-size: larger;
+  font-weight: 700;
+}
+th,
+tr,
+td {
+  border: 2px solid #000;
+  text-align: center;
+}
+span {
+  color: #f00;
+  text-align: center;
+}
