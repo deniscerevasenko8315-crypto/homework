@@ -1,0 +1,33 @@
+fieldset {
+  width: 280px;
+  background-color: #d8d8d8;
+}
+h3 {
+  margin: 5px 0px 10px;
+}
+.tom input,
+.tom textarea {
+  display: block;
+  margin-top: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid;
+  cursor: pointer;
+}
+textarea {
+  resize: vertical;
+  width: 200px;
+  min-height: 30px;
+  max-height: 250px;
+}
+.tab {
+  cursor: pointer;
+}
+button {
+  display: block;
+  margin-top: 5px;
+  padding: 4px 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
