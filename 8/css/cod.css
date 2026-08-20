@@ -1,0 +1,37 @@
+html {
+  font-family: Areial, sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+.header {
+  max-width: 1240px;
+  margin: 0px auto;
+}
+.contener {
+  border-bottom: 3px solid;
+  padding: 10px;
+}
+.contener-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+.img {
+  max-width: 50px;
+}
+ul {
+  display: flex;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  gap: 40px;
+}
+a {
+  color: #000;
+}
+.good-like {
+  text-decoration: none;
+}
