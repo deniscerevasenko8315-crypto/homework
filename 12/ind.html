@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>регистрация</title>
+    <link rel="stylesheet" href="./css/cod.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <h3>Ваши личные данные</h3>
+        <label class="tom">
+          Ваше имя
+          <input type="text" placeholder="Имя" required name="name" />
+        </label>
+        <label class="tom">
+          Ваше Возрост
+          <input
+            type="number"
+            placeholder="Возрост"
+            required
+            inputmode="numeric"
+            name="Age"
+          />
+        </label>
+        <label class="tom">
+          Ваша номер телефона
+          <input type="tel" placeholder="Номер телефона" required name="tel" />
+        </label>
+        <label class="tom">
+          Ваша электронная почта
+          <input type="email" placeholder="Почта" required name="email" />
+        </label>
+        <label class="tom">
+          Ваше сообщение
+          <textarea name="text" type="text" placeholder="Сообщение"></textarea>
+        </label>
+        <label class="tab checkbox-tab">
+          <input class="checkbox" type="checkbox" required />
+          Принимаю правила
+        </label>
+        <button>отправить</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
