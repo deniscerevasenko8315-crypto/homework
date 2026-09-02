@@ -1,0 +1,25 @@
+
+.index-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #000;
+  height: 120px;
+  gap: 10px;
+}
+
+.txt-fit-studio {
+  font-weight: 400;
+}
+.blok-number {
+  text-align: right;
+}
+.cool {
+  opacity: 0.5;
+  font-size: small;
+}
+.number {
+  margin-top: 8px;
+  text-decoration: none;
+  color: #000;
+}
