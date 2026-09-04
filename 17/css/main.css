@@ -1,0 +1,194 @@
+.hero {
+  position: relative;
+  padding-top: 80px;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 48px;
+  background: url(../img/decor-sport.svg);
+  bottom: 106px;
+}
+.contener-main {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.dox-zogol {
+  display: flex;
+  flex-direction: column;
+  width: 492px;
+  height: 513px;
+}
+.intrest {
+  margin-bottom: 40px;
+  font-family: "Oswald", sans-serif;
+  font-size: 62px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 115%;
+}
+.wow {
+  font-weight: 600;
+  color: #2e5ce7;
+}
+.dox-zogol .text-zogol {
+  margin-bottom: 140px;
+  max-width: 440px;
+}
+
+.button-main {
+  align-self: flex-start;
+  display: inline-block;
+  padding: 19px 32px;
+  font-weight: 500;
+  line-height: 130%;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  background-color: #2e5ce7;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    background-color 0.2s;
+}
+.button-main:hover {
+  opacity: 0.7;
+}
+
+.hero-choose {
+  max-width: 160px;
+  text-align: center;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  padding: 21px;
+  border: 1px solid #000;
+  background: rgb(255 255 255 / 0.9);
+}
+.sport-people {
+  position: relative;
+  display: flex;
+}
+
+.text-look {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  line-height: 115%;
+  text-transform: uppercase;
+  color: #2c332f;
+  padding-bottom: 40px;
+  max-width: 596px;
+}
+.contener-title-large {
+  font-size: 48px;
+}
+.news-arnicle {
+  max-width: 284px;
+  background-color: #fff;
+  border: 1px solid #4e4e4e;
+  overflow: hidden;
+}
+.news-contener {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+}
+.news-arnicle img {
+  display: block;
+}
+.news-info {
+  padding: 20px 20px 0;
+}
+.news-arnicle footer {
+  padding: 0 20px 20px;
+}
+.news-date {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.news-zogol {
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+}
+.time {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: right;
+  color: #535755;
+}
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-decoration: none;
+  color: #1fb3f2;
+}
+.news-link::after {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 9px;
+  background-image: url(../img/strelka.svg);
+  transition: transform 0.3s;
+}
+.news-link:hover::after {
+  transform: translateX(5px);
+}
+.faq-contener {
+  display: flex;
+  gap: 28px;
+}
+.faq {
+  position: relative;
+}
+.faq::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: calc(50% - 200px);
+  height: 48px;
+  background: url(../img/decor-sport.svg);
+  top: 215px;
+}
+details {
+  margin-bottom: 20px;
+  border-block: 1px solid #6a6666;
+}
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  list-style: none;
+  padding: 20px;
+  cursor: pointer;
+}
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+summary::after {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 22px;
+  background: url(../img/big-strelka-1.svg) no-repeat center / cover;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details > p {
+  padding: 0 20px 20px;
+}
