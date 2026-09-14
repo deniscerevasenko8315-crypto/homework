@@ -1,0 +1,38 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #c0c0c0;
+  height: 120px;
+  gap: 10px;
+}
+
+.header__txt-fit-studio {
+  font-weight: 300;
+}
+.header__blok-number {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+.header__blok-number-text {
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+.header__blok-number-number {
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.header__blok-number-number:hover {
+  color: #0f4bfd;
+}
