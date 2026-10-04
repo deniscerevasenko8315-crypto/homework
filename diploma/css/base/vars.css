@@ -1,0 +1,43 @@
+:root {
+  /* font-family */
+  --font-family: "GothamPro", sans-serif;
+  --second-family: "LatinCT", sans-serif;
+  --third-family: "Roboto", sans-serif;
+  --font3: "Bahnschrift", sans-serif;
+
+  /* color */
+  --main-color: #fff;
+  --bg-color: #0e0e12;
+  --button-color: #e0a458;
+  --green-lumin: #82c36d;
+  --hover-color: radial-gradient(circle, #e7aa19 0%, #cb6d9c 100%);
+  --outline-color: linear-gradient(135deg, #ff8924 0%, #ffb017 100%);
+  --btn-color: linear-gradient(
+    90deg,
+    #dc6b30 0%,
+    #e4864f 42%,
+    #ffbe82 73%,
+    #e49031 100%
+  );
+  --gradient-green: linear-gradient(180deg, #82c36d 0%, #25523e 100%);
+
+  /* hover-color */
+  --orange-light: #ffb017;
+  --orange-fill-hover: rgba(255, 137, 36, 0.12);
+  --orange-glow-active: rgba(255, 137, 36, 0.45);
+  /* active-color */
+  --orange-fill-active: rgba(255, 137, 36, 0.22);
+  --orange-glow-active: rgba(255, 137, 36, 0.3);
+  /* container */
+  --container-width: 1570px;
+  --container-padding: 16px;
+
+  /* transition */
+  --transition-time: 0.3s;
+  
+  /* z-index */
+  --layers-negative: -1;
+  --layers-1: 1;
+  --layers-2: 2;
+  --layers-3: 3;
+}
