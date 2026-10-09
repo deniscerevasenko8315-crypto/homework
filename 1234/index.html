@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./icon/logo-64x64.ico"
+      type="image/x-icon"
+    />
+    <script type="module" src="./js/index.js"></script>
+    <title>LEADER CLASSIC</title>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="container header__container">
+        <button class="header__burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+        <a class="logo header__logo" href="">
+          <img
+            class="logo__img"
+            src="./icon/logo-combined.svg"
+            width="52px"
+            height="66px"
+            alt="Логотип Leader classic"
+          />
+          <span class="logo__span"
+            ><span>LEADER</span> <span>CLASSIC</span></span
+          >
+        </a>
+        <div class="lang header__lang">
+          <button class="lang__toggle">
+            <img
+              class="lang__img"
+              src="./icon/language-ru.svg"
+              width="23px"
+              height="23px"
+              alt="Выбран Русский язык"
+            />RU
+            <svg width="22px" height="22px">
+              <use class="lang__icon" href="./icon/down-arrow.svg"></use>
+            </svg>
+          </button>
+        </div>
+        <nav
+          class="menu header__menu"
+          id="header__menu"
+          aria-label="Главное меню"
+        >
+          <ul class="menu__list">
+            <li class="menu__item"></li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Тарифы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Бонусы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Реферальная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__controls">
+          <button class="main header__button-main">Войти</button>
+          <button class="active header__button-active">Открыть счёт</button>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
