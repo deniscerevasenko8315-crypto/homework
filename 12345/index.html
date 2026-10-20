@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./icon/logo-64x64.ico"
+      type="image/x-icon"
+    />
+    <script type="module" src="./js/index.js"></script>
+    <title>LEADER CLASSIC</title>
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="container header__container">
+        <button class="header__burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+        <a class="logo header__logo" href="">
+          <img
+            class="logo__img"
+            src="./icon/logo-combined.svg"
+            width="52px"
+            height="66px"
+            alt="Логотип Leader classic"
+          />
+          <span class="logo__span"
+            ><span>LEADER</span> <span>CLASSIC</span></span
+          >
+        </a>
+        <div class="lang header__lang">
+          <button class="lang__toggle">
+            <img
+              class="lang__img"
+              src="./icon/language-ru.svg"
+              width="23px"
+              height="23px"
+              alt="Выбран Русский язык"
+            />RU
+            <svg width="22px" height="22px">
+              <use class="lang__icon" href="./icon/down-arrow.svg"></use>
+            </svg>
+          </button>
+        </div>
+        <nav
+          class="menu header__menu"
+          id="header__menu"
+          aria-label="Главное меню"
+        >
+          <button
+            class="menu__close"
+            id="header__menu"
+            aria-label="Закрыть меню"
+          ></button>
+          <span class="menu__title">LEADER CLASSIC</span>
+          <div class="lang menu__lang">
+            <button class="lang__toggle">
+              <img
+                class="lang__img"
+                src="./icon/language-ru.svg"
+                width="23px"
+                height="23px"
+                alt="Выбран Русский язык"
+              />RU
+              <svg width="22px" height="22px">
+                <use class="lang__icon" href="./icon/down-arrow.svg"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Тарифы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Бонусы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Реферальная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__controls">
+          <button class="button-main header__button-main">Войти</button>
+          <button class="active header__button-active">Открыть счёт</button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container main__container">
+        <div class="main__promo">
+          <div class="promo__container">
+            <img
+              class="promo__img"
+              src="./icon/gift-80.svg"
+              width="70"
+              height="70"
+              alt="подарок при регистрации"
+            />
+            <div class="promo__info">
+              <h2 class="promo__title">Станьте миллионером с Leader Classic</h2>
+              <p class="promo__text">
+                Откройте счет, инвестируйте в фонды Leader Classic и получите
+                шанс выиграть один из 100&nbsp;000&nbsp;000&nbsp;₽
+              </p>
+            </div>
+            <p class="promo__time" aria-label="До конца акции">
+              <span class="promo__time-value">29</span>
+              <span class="promo__time-unit">д</span>
+              <span class="promo__time-sep">:</span>
+              <span class="promo__time-value">08</span>
+              <span class="promo__time-unit">ч</span>
+              <span class="promo__time-sep">:</span>
+              <span class="promo__time-value">32</span>
+              <span class="promo__time-unit">м</span>
+              <span class="promo__time-sep">:</span>
+              <span class="promo__time-value">59</span>
+              <span class="promo__time-unit">с</span>
+            </p>
+          </div>
+        </div>
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__content">
+              <h1 class="assets__title">
+                ТОП-5 акций с <br />доходностью&nbsp;до&nbsp;10-30%
+                <br />
+                уже&nbsp;в&nbsp;2026&nbsp;году
+              </h1>
+              <ul class="assets__list">
+                <li class="assets__item">
+                  Открытие брокерского счета за 5 минут без визита в офис
+                </li>
+                <li class="assets__item">
+                  Доступ к ценным бумагам с любого устройства
+                </li>
+                <li class="assets__item">Поддержка в чате 24/7</li>
+              </ul>
+            </div>
+            <div class="button__hero">
+              <button class="active hero__active">
+                Скачать ТОП-5 акций
+                <img
+                  class="hero__active-img"
+                  src="./icon/button-top-5.svg"
+                  aria-hidden="true"
+                />
+              </button>
+              <button class="button-main hero__button-main">
+                Открыть счёт
+              </button>
+            </div>
+            <div class="hero__investor">
+              <ul class="hero__avatars">
+                <li class="hero__avatar">
+                  <img
+                    src="./img/avatars-1.png"
+                    alt="Наш инвестор"
+                    width="50"
+                    height="50"
+                  />
+                </li>
+                <li class="hero__avatar">
+                  <img
+                    src="./img/avatars-2.png"
+                    alt="Наш инвестор"
+                    width="50"
+                    height="50"
+                  />
+                </li>
+                <li class="hero__avatar">
+                  <img
+                    src="./img/avatars-3.png"
+                    alt="Наш инвестор"
+                    width="50"
+                    height="50"
+                  />
+                </li>
+              </ul>
+              <p class="hero__invest-text">
+                Сейчас инвестируют <br />100&nbsp;000+ пользователей
+              </p>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <img
+              class="visual__img"
+              src="./img/Wooden Hand iPhone 12 Pro.png"
+              alt="Приложение на телефоне"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

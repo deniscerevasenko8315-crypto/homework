@@ -1,0 +1,116 @@
+.main__promo {
+  padding: 18px 48px 18px 14px;
+  background-color: var(--promo-bg);
+  border-radius: 18px;
+}
+.promo__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.promo__img {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+}
+.promo__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+.promo__title {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 130%;
+}
+.promo__text {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--promo-text-color);
+}
+.promo__time {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  flex-shrink: 0;
+  font-weight: 300;
+  white-space: nowrap;
+}
+.promo__time-value {
+  font-size: 23px;
+  font-variant-numeric: tabular-nums;
+}
+.promo__time-unit {
+  font-size: 16px;
+}
+.promo__time-sep {
+  font-size: 23px;
+  margin-inline: 1px;
+}
+@media (width <= 992px) {
+  .main__promo {
+    padding: clamp(15px, -0.897rem + 3.26vw, 18px)
+      clamp(30px, -9.13rem + 19.57vw, 48px)
+      clamp(15px, -0.897rem + 3.26vw, 18px)
+      clamp(12px, -0.473rem + 2.17vw, 14px);
+  }
+  .promo__title {
+    font-size: clamp(16px, -0.834rem + 3.26vw, 19px);
+  }
+  .promo__text {
+    font-size: clamp(16px, -0.834rem + 3.26vw, 19px);
+  }
+  .promo__time-value {
+    font-size: clamp(19px, -1.258rem + 4.35vw, 23px);
+  }
+  .promo__time-sep {
+    font-size: clamp(19px, -1.258rem + 4.35vw, 23px);
+  }
+}
+@media (width <= 768px) {
+  .main__promo {
+    padding: clamp(12px, -0.532rem + 3.06vw, 15px)
+      clamp(20px, -3.023rem + 10.2vw, 30px)
+      clamp(12px, -0.532rem + 3.06vw, 15px) clamp(10px, -0.23rem + 2.04vw, 12px);
+  }
+  .promo__container {
+    gap: clamp(10px, -1.939rem + 6.12vw, 16px);
+  }
+  .promo__img {
+    width: clamp(2.5rem, -6.06rem + 21.74vw, 4.375rem);
+    height: clamp(2.5rem, -6.06rem + 21.74vw, 4.375rem);
+  }
+  .promo__title {
+    font-size: clamp(13px, -0.469rem + 3.06vw, 16px);
+  }
+  .promo__text {
+    font-size: clamp(13px, -0.469rem + 3.06vw, 16px);
+  }
+  .promo__time-value {
+    font-size: clamp(15px, -0.772rem + 4.08vw, 19px);
+  }
+  .promo__time-unit {
+    font-size: clamp(0.75rem, -0.959rem + 4.08vw, 1rem);
+  }
+  .promo__time-sep {
+    font-size: clamp(15px, -0.772rem + 4.08vw, 19px);
+  }
+}
+@media (width <= 576px) {
+  .promo__container {
+    flex-wrap: wrap;
+  }
+  .promo__info {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .promo__time {
+    flex-basis: 100%;
+    justify-content: center;
+    padding-top: 10px;
+    border-top: 1px solid rgba(225, 255, 255, 0.12);
+  }
+}
