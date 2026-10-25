@@ -9,7 +9,7 @@
 .page__body {
   position: relative;
   min-width: 375px;
-  height: 150vh;
+  /* height: 150vh; */
   background-color: var(--bg-color);
 }
 .page__body::before {
@@ -124,4 +124,27 @@ a:focus-visible {
   z-index: var(--layers-negative);
   opacity: 0;
   visibility: hidden;
+}
+.main__title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 117%;
+  text-align: center;
+  color: var(--main-color);
+}
+.title__opportunities {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 158%;
+  text-align: center;
+  color: var(--main-color);
+}
+@media (width <= 1200px) {
+  /* max-width 1200px min-width 992px  */
+  .main__title {
+    font-size: clamp(38px, -2.692rem + 8.17vw, 55px);
+  }
+  .title__opportunities {
+    font-size: clamp(17px, -0.428rem + 2.4vw, 22px);
+  }
 }
