@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .page {
   font-family: var(--font-family);
   font-weight: 400;
@@ -146,5 +149,29 @@ a:focus-visible {
   }
   .title__opportunities {
     font-size: clamp(17px, -0.428rem + 2.4vw, 22px);
+  }
+}
+@media (width <= 576px) {
+  .main__title {
+    font-size: clamp(25px, 0.047rem + 6.47vw, 38px);
+  }
+  .title__opportunities {
+    font-size: clamp(13px, 0.346rem + 1.99vw, 17px);
+  }
+}
+.main__description {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 159%;
+  color: var(--main-color);
+}
+@media (width <= 992px) {
+  .main__description {
+    font-size: clamp(17px, 0.634rem + 0.89vw, 19px);
+  }
+}
+@media (width <= 576px) {
+  .main__description {
+    font-size: clamp(0.875rem, 0.525rem + 1.49vw, 1.063rem);
   }
 }

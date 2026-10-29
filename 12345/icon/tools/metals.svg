@@ -1,0 +1,10 @@
+<svg id="metals" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#000">
+  <path d="M7 41 L9.5 31 H20.5 L23 41 Z"/>
+  <line x1="12" y1="37" x2="18" y2="37"/>
+  <path d="M25 41 L27.5 31 H38.5 L41 41 Z"/>
+  <line x1="30" y1="37" x2="36" y2="37"/>
+  <path d="M16 28 L18.5 19 H29.5 L32 28 Z"/>
+  <line x1="21" y1="24.5" x2="27" y2="24.5"/>
+  <path d="M36 4 Q36 9 41 9 Q36 9 36 14 Q36 9 31 9 Q36 9 36 4 Z"/>
+  <path d="M42 15 Q42 17 44 17 Q42 17 42 19 Q42 17 40 17 Q42 17 42 15 Z"/>
+</svg>

@@ -1,5 +1,5 @@
 .stocks {
-  margin-bottom: 70px;
+  margin-bottom: 150px;
 }
 .stocks__title {
   display: flex;
@@ -30,8 +30,11 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 70px;
-  gap: 30px;
+  gap: 40px;
   width: 100%;
+}
+.product__list--clone {
+  display: none;
 }
 .product__item {
   flex: 0 0 144px;
@@ -100,7 +103,7 @@
 @media (width <= 1100px) {
   /* max-width 1100px min-width: 992px; */
   .product__list {
-    gap: clamp(20px, -10.231rem + 18.52vw, 30px);
+    gap: clamp(20px, -10.231rem + 18.52vw, 40px);
   }
   .product__item {
     flex: 0 0 auto;
@@ -116,16 +119,16 @@
   .product__profit {
     font-size: clamp(17px, -0.66rem + 2.78vw, 20px);
     width: clamp(100px, -7.528rem + 22.22vw, 124px);
-    height: clamp(28px, -2.843rem + 7.41vw, 26px);
+    height: clamp(26px, -2.843rem + 7.41vw, 28px);
   }
 }
-.product__list--clone {
-  display: none;
-}
-@media (width <= 992px) {
-  /* max-width 992px min-width 769px: карточки ужимаются, чтобы 6 штук влезли в ряд */
+@media (width <=992px) {
+  .stocks__title {
+    margin-bottom: clamp(50px, -1.161rem + 8.93vw, 70px);
+  }
   .product__list {
     gap: clamp(12px, -15.59px + 3.587vw, 20px);
+    margin-bottom: clamp(50px, -1.161rem + 8.93vw, 70px);
   }
   .product__logo {
     width: clamp(100px, 31.03px + 8.969vw, 120px);
@@ -133,7 +136,9 @@
   }
 }
 @media (width <= 768px) {
-  /* бегущая строка */
+  .stocks {
+    margin-bottom: clamp(90px, 2.047rem + 15.27vw, 150px);
+  }
   .product__viewing-window {
     overflow-x: clip;
   }
@@ -150,7 +155,6 @@
     justify-content: flex-start;
     width: auto;
     gap: 20px;
-    /* отступ после последней карточки = gap, чтобы стык был незаметен */
     padding-right: 20px;
   }
   .product__list--clone {
@@ -159,16 +163,19 @@
   .product__logo {
     width: 120px;
     height: 120px;
+    width: clamp(100px, 31.03px + 8.969vw, 120px);
+    height: clamp(100px, 31.03px + 8.969vw, 120px);
   }
 }
 @media (width <= 576px) {
-  /* max-width 576px min-width 375px */
+  .stocks__active {
+    padding: clamp(0.938rem, 0.354rem + 2.49vw, 1.25rem) 35px;
+  }
+  .product__item {
+    gap: clamp(4px, 0.017rem + 1vw, 6px);
+  }
   .product__item:nth-child(odd) {
     margin-top: clamp(40px, 2.69px + 9.95vw, 60px);
-  }
-  .product__logo {
-    width: clamp(100px, 62.69px + 9.95vw, 120px);
-    height: clamp(100px, 62.69px + 9.95vw, 120px);
   }
   .product__percent {
     font-size: clamp(20px, 12.54px + 1.99vw, 24px);
@@ -176,8 +183,10 @@
   .product__profit {
     font-size: clamp(15px, 11.27px + 0.995vw, 17px);
     width: clamp(88px, 65.61px + 5.97vw, 100px);
+    height: clamp(22px, 0.909rem + 1.99vw, 26px);
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .product__track {
     animation: none;

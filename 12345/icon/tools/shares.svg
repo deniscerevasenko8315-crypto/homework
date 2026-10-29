@@ -1,0 +1,9 @@
+<svg id="shares" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#000">
+  <polyline points="8,6 8,40 42,40"/>
+  <line x1="15" y1="40" x2="15" y2="43"/>
+  <line x1="22" y1="40" x2="22" y2="43"/>
+  <line x1="29" y1="40" x2="29" y2="43"/>
+  <line x1="36" y1="40" x2="36" y2="43"/>
+  <polyline points="13,32 19,24 25,28 37,13"/>
+  <polyline points="30,13 37,13 37,20"/>
+</svg>
