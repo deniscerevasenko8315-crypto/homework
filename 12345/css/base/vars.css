@@ -8,6 +8,7 @@
   /* color */
   --main-color: #fff;
   --main-tools: #000;
+  --main-card: #1b1b1c;
   --bg-color: #0e0e12;
   --button-color: #e0a458;
   --green-lumin: #82c36d;
@@ -28,6 +29,8 @@
   --up-bg: #dfe3e6;
   --up-bg-hover: #c3c9ce;
   --steps-line-gradient: linear-gradient(180deg, #3d4f3b5e 0%, #3d4f3b00 100%);
+  --offer-border-glow: #5dcaa5;
+  --offer-shine: #ffffff12;
 
   /* hover-color */
   --orange-light: #ffb017;
@@ -52,4 +55,7 @@
   --layers-1: 1;
   --layers-2: 2;
   --layers-3: 3;
+
+  /* decor */
+  --decor-px: clamp(0.6px, 0.4286px + 0.02976vw, 1px);
 }
