@@ -1,0 +1,170 @@
+.faq__container {
+  --faq-icon: clamp(32px, 1rem + 1.7vw, 50px);
+  --faq-pad: clamp(14px, 0.4rem + 1.8vw, 40px);
+  --faq-gap: clamp(16px, 4.2vw, 80px);
+  --faq-btn-h: clamp(56px, 2.5rem + 1.7vw, 72px);
+
+  display: grid;
+  grid-template-columns: clamp(240px, 28%, 450px) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "text   list"
+    "button list";
+  column-gap: clamp(32px, 6vw, 110px);
+}
+.faq-text {
+  grid-area: text;
+}
+.faq-text__title {
+  text-align: start;
+  margin-bottom: 25px;
+}
+.faq-text__description {
+  max-width: 340px;
+}
+.faq__button {
+  grid-area: button;
+  align-self: end;
+  justify-self: start;
+  inline-size: clamp(240px, 20vw, 380px);
+  block-size: var(--faq-btn-h);
+}
+.faq-list {
+  grid-area: list;
+}
+.faq-list__title {
+  display: grid;
+  grid-template-columns: var(--faq-icon) minmax(0, 1fr) var(--faq-icon);
+  align-items: center;
+  column-gap: var(--faq-gap);
+  padding-block: var(--faq-pad);
+  font-weight: 300;
+  font-size: clamp(18px, 0.6rem + 1.4vw, 36px);
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+  list-style: none;
+  cursor: pointer;
+}
+.faq-list__title::-webkit-details-marker {
+  display: none;
+}
+.faq-list__title:focus-visible {
+  outline: 2px solid var(--orange-light);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+.faq-list__title::before {
+  content: "?" / "";
+  display: grid;
+  place-items: center;
+  inline-size: var(--faq-icon);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: calc(var(--faq-icon) * 0.5);
+  letter-spacing: 0;
+  color: var(--bg-color);
+  background: var(--main-color);
+  transition:
+    color var(--transition-time) ease,
+    box-shadow var(--transition-time) ease;
+}
+.faq-list__title::after {
+  content: "";
+  inline-size: var(--faq-icon);
+  aspect-ratio: 1;
+  background: url("../../icon/faq/faq-arrow.svg") center / contain no-repeat;
+  opacity: 0.3;
+  transition: opacity var(--transition-time) ease;
+}
+.faq-list__details[open] .faq-list__title::before {
+  color: var(--main-color);
+  background: var(--gradient-green);
+  box-shadow: 0 0 14px rgba(130, 195, 109, 0.45);
+}
+.faq-list__details[open] .faq-list__title::after {
+  background-image: url("../../icon/faq/faq-arrow-up.svg");
+  opacity: 1;
+}
+@media (hover: hover) {
+  .faq-list__title:hover::before {
+    color: var(--main-color);
+    background: var(--gradient-green);
+  }
+  .faq-list__title:hover::after {
+    opacity: 1;
+  }
+}
+.faq-list__description {
+  padding-inline: calc(var(--faq-icon) + var(--faq-gap));
+  padding-block-end: var(--faq-pad);
+  font-weight: 300;
+  font-size: clamp(14px, 0.7rem + 0.5vw, 19px);
+  line-height: 159%;
+  color: var(--promo-text-color);
+}
+.faq-list__details {
+  interpolate-size: allow-keywords;
+}
+.faq-list__details::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition:
+    block-size var(--transition-time) ease,
+    content-visibility var(--transition-time) allow-discrete;
+}
+.faq-list__details[open]::details-content {
+  block-size: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-list__details::details-content,
+  .faq-list__title::before,
+  .faq-list__title::after {
+    transition: none;
+  }
+}
+.faq__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+@media (width <= 992px) {
+  .faq__button {
+    font-size: clamp(15px, 0.295rem + 1.34vw, 18px);
+  }
+}
+@media (width <= 768px) {
+  .faq__container {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "text"
+      "list"
+      "button";
+    row-gap: clamp(24px, 5vw, 40px);
+  }
+  .faq-text {
+    text-align: center;
+  }
+  .faq-text__title {
+    text-align: center;
+    margin-bottom: clamp(12px, 3vw, 25px);
+  }
+  .faq-text__description {
+    margin-inline: auto;
+  }
+  .faq__button {
+    justify-self: center;
+    inline-size: min(100%, 380px);
+    margin-block-end: 0;
+    font-size: clamp(14px, 0.636rem + 1.02vw, 18px);
+  }
+}
+
+@media (width <= 576px) {
+  .faq__button {
+    inline-size: 100%;
+  }
+}

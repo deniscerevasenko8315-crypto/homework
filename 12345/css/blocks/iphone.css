@@ -1,0 +1,193 @@
+.container__iphone {
+  padding-block: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+.iphone__logo {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  flex: 1 1 55%;
+  width: 800px;
+}
+.iphone__logo::before {
+  content: "";
+  position: absolute;
+  inset: 12% 8%;
+  z-index: var(--layers-negative);
+  border-radius: 50%;
+  background: var(--green-lumin);
+  opacity: 0.18;
+  filter: blur(100px);
+  pointer-events: none;
+}
+.iphone-invest__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@keyframes iphone-glow {
+  0%,
+  100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+.iphone-invest {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+}
+.iphone-invest__title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 122%;
+  text-align: start;
+  color: var(--main-color);
+  margin-bottom: 25px;
+}
+.iphone-invest__description {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 159%;
+  color: var(--main-color);
+  margin-bottom: 50px;
+}
+.iphone-invest__link {
+  display: flex;
+  gap: 20px;
+}
+.iphone-invest__link-phone {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 126%;
+  border: 2px solid var(--main-color);
+  border-radius: 50px;
+  padding: 25px 30px;
+  color: var(--main-color);
+  transition:
+    background-color var(--transition-time) ease,
+    border-color var(--transition-time) ease;
+}
+.iphone-invest__icon {
+  flex-shrink: 0;
+}
+.iphone-invest__link-phone:focus-visible {
+  border-radius: 50px;
+}
+@media (hover: hover) {
+  .iphone-invest__link-phone:hover {
+    border-color: var(--green-lumin);
+    background-color: var(--green-hover);
+  }
+  .iphone-invest__link-phone:hover .iphone-invest__icon {
+    animation: iphone-icon-jump 0.5s ease;
+  }
+}
+@keyframes iphone-icon-jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  70% {
+    transform: translateY(1px);
+  }
+}
+.iphone-invest__link-phone:active {
+  background-color: var(--green-active);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .iphone__logo::before,
+  .iphone-invest__link-phone:hover .iphone-invest__icon {
+    animation: none;
+  }
+}
+@media (width <= 1300px) {
+  .iphone-invest {
+    max-width: clamp(490px, -14.375rem + 60vw, 550px);
+  }
+  .iphone-invest__title {
+    font-size: clamp(52px, -2.75rem + 8vw, 60px);
+  }
+  .iphone-invest__description {
+    font-size: clamp(18px, 0.293rem + 1.44vw, 22px);
+  }
+  .iphone-invest__link-phone {
+    padding: clamp(20px, -2.5rem + 5vw, 25px) clamp(25px, -2.188rem + 5vw, 30px);
+  }
+}
+@media (width <= 1200px) {
+  .container__iphone {
+    gap: clamp(20px, -13.654rem + 24.04vw, 70px);
+  }
+  .iphone-invest {
+    max-width: clamp(450px, 16.202rem + 19.23vw, 490px);
+  }
+  .iphone-invest__link-phone {
+    font-size: clamp(13px, -1.25rem + 3vw, 16px);
+  }
+}
+@media (width <= 992px) {
+  .iphone-invest {
+    max-width: clamp(350px, 0.446rem + 44.64vw, 450px);
+  }
+  .iphone-invest__title {
+    font-size: clamp(35px, -4.735rem + 12.88vw, 52px);
+  }
+  .iphone-invest__description {
+    font-size: clamp(16px, 0.186rem + 1.52vw, 18px);
+    margin-bottom: clamp(25px, -3.795rem + 11.16vw, 50px);
+  }
+  .iphone-invest__link {
+    flex-direction: column;
+    width: 100%;
+  }
+  .iphone-invest__link-phone {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (width <= 768px) {
+  .iphone-invest__title {
+    text-align: center;
+  }
+  .iphone-invest__description {
+    text-align: center;
+  }
+  .container__iphone {
+    flex-direction: column;
+    align-items: center;
+  }
+  .iphone-invest {
+    order: -1;
+    width: 100%;
+  }
+  .iphone__logo {
+    flex: none;
+    width: 100%;
+    max-width: 640px;
+  }
+}
+@media (width <= 576px) {
+  .iphone-invest__title {
+    font-size: clamp(25px, 0.396rem + 4.98vw, 35px);
+  }
+  .iphone-invest__description {
+    font-size: clamp(14px, 0.642rem + 1vw, 16px);
+  }
+  .iphone-invest__link-phone {
+    padding: clamp(15px, 0.354rem + 2.49vw, 20px) 25;
+  }
+}

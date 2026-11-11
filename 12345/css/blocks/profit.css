@@ -1,0 +1,347 @@
+.profit {
+  padding-block: 100px;
+}
+
+@property --profit {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 5;
+}
+.profit__container {
+  display: flex;
+  gap: 180px;
+  align-items: center;
+  justify-content: center;
+}
+.profit-calc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 520px;
+  timeline-scope: --profit-thumb;
+}
+.profit-calc__gauge {
+  display: grid;
+  grid-template-rows: 1fr auto auto auto;
+  justify-items: center;
+  width: 100%;
+}
+.profit-calc__arc {
+  grid-row: 1 / -1;
+  grid-column: 1;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.profit-calc__arc-track,
+.profit-calc__arc-fill {
+  fill: none;
+  stroke-width: 14;
+  stroke-linecap: round;
+}
+.profit-calc__arc-track {
+  stroke: var(--support-bg);
+}
+.profit-calc__arc-fill {
+  stroke: var(--green-lumin);
+  stroke-dasharray: 100;
+  stroke-dashoffset: 70;
+  filter: drop-shadow(0 0 10px var(--green-lumin));
+}
+.profit-calc__label,
+.profit-calc__value,
+.profit-calc__badge {
+  grid-column: 1;
+}
+.profit-calc__label {
+  grid-row: 2;
+  margin: 0;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--promo-text-color);
+}
+.profit-calc__value {
+  --value-size: 50px;
+  grid-row: 3;
+  margin: 4px 0 14px;
+  font-weight: 700;
+  font-size: var(--value-size);
+  line-height: 1.1;
+  color: var(--main-color);
+}
+.profit-calc__badge {
+  grid-row: 4;
+  margin-bottom: 30px;
+  padding: 4px 20px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--promo-text-color);
+  background-color: #25523e;
+  border-radius: 20px;
+}
+.profit-calc__range {
+  width: 60%;
+  height: 24px;
+  margin: 0;
+  background: linear-gradient(var(--support-bg) 0 0) center / 100% 4px no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+  appearance: none;
+}
+.profit-calc__range::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: var(--green-lumin);
+  border: none;
+  border-radius: 50%;
+  border-image: linear-gradient(var(--green-lumin) 0 0) fill 0 / calc(50% - 2px)
+    0 / 0 0 0 100vw;
+  box-shadow: 0 0 8px var(--green-lumin);
+  appearance: none;
+  view-timeline: --profit-thumb inline;
+}
+.profit-calc__range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: var(--green-lumin);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--green-lumin);
+}
+.profit-calc__range::-moz-range-progress {
+  height: 4px;
+  background-color: var(--green-lumin);
+}
+.profit-calc__range:focus-visible {
+  outline: 2px solid var(--orange-light);
+  outline-offset: 4px;
+}
+@supports (animation-timeline: view()) {
+  .profit-calc__value {
+    font-size: 0;
+    animation: profit-value linear both;
+    animation-timeline: --profit-thumb;
+    animation-range: entry 100% exit 0%;
+  }
+  .profit-calc__value::after {
+    content: "до " counter(profit) "%";
+    font-size: var(--value-size);
+    counter-reset: profit var(--profit);
+  }
+}
+@keyframes profit-value {
+  0% {
+    --profit: 30;
+  }
+  40% {
+    --profit: 14;
+  }
+  70% {
+    --profit: 5;
+  }
+  100% {
+    --profit: 1;
+  }
+}
+.profit-calc__mode {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: 20px;
+  margin: 0;
+  margin-left: 20%;
+  padding: 0;
+  border: none;
+}
+.profit-calc__option {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+}
+.profit-calc__radio {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  background-color: transparent;
+  border: 2px solid var(--green-lumin);
+  border-radius: 50%;
+  cursor: pointer;
+  appearance: none;
+  transition:
+    border-width var(--transition-time) ease,
+    box-shadow var(--transition-time) ease;
+}
+.profit-calc__radio:checked {
+  border-width: 9px;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 10px var(--green-lumin);
+}
+.profit-calc__radio:focus-visible {
+  outline: 2px solid var(--orange-light);
+  outline-offset: 4px;
+}
+.profit-calc__option-text {
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--promo-text-color);
+  transition: color var(--transition-time) ease;
+}
+.profit-calc__radio:checked + .profit-calc__option-text {
+  color: var(--main-color);
+}
+@media (hover: hover) {
+  .profit-calc__option:hover .profit-calc__option-text {
+    color: var(--main-color);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .profit-calc__radio,
+  .profit-calc__option-text {
+    transition: none;
+  }
+}
+.profit-info {
+  max-width: 690px;
+  display: grid;
+  grid-row: 3;
+  grid-template-columns: subgrid;
+}
+.profit-info__title {
+  text-align: start;
+  margin-bottom: 18px;
+}
+.profit-info__description {
+  text-align: start;
+  max-width: 440px;
+  margin-bottom: 50px;
+}
+.profit-info__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 159%;
+  letter-spacing: 0%;
+  max-width: 320px;
+}
+
+@media (width <= 1400px) {
+  .profit__container {
+    gap: clamp(100px, -5.907rem + 19.61vw, 180px);
+  }
+  .profit-calc {
+    flex-shrink: 0;
+    gap: clamp(32px, 0.784rem + 1.96vw, 40px);
+    width: clamp(420px, 11.054rem + 24.51vw, 520px);
+  }
+  .profit-calc__label {
+    font-size: clamp(19px, 0.732rem + 0.74vw, 22px);
+  }
+  .profit-calc__value {
+    --value-size: clamp(42px, 1.409rem + 1.96vw, 50px);
+  }
+  .profit-calc__badge {
+    margin-bottom: clamp(22px, 0.159rem + 1.96vw, 30px);
+  }
+  .profit-calc__mode {
+    gap: clamp(16px, 0.392rem + 0.98vw, 20px);
+  }
+  .profit-calc__option {
+    gap: clamp(18px, 0.213rem + 1.47vw, 24px);
+  }
+  .profit-calc__radio {
+    --radio-size: clamp(28px, 1.142rem + 0.98vw, 32px);
+    width: var(--radio-size);
+    height: var(--radio-size);
+  }
+  .profit-calc__radio:checked {
+    border-width: calc(var(--radio-size) * 0.28);
+  }
+  .profit-calc__option-text {
+    font-size: clamp(17px, 0.759rem + 0.49vw, 19px);
+  }
+}
+@media (width <= 1200px) {
+  .profit-info__description {
+    margin-bottom: clamp(38px, -1.202rem + 5.77vw, 50px);
+  }
+  .profit-info__button {
+    font-size: clamp(18px, 0.529rem + 0.96vw, 20px);
+  }
+}
+
+@media (width <= 992px) {
+  .profit {
+    padding-block: clamp(80px, 0.714rem + 8.93vw, 100px);
+  }
+  .profit__container {
+    flex-direction: column;
+  }
+  .profit-info__button {
+    font-size: clamp(14px, 0.018rem + 1.79vw, 18px);
+    max-width: clamp(240px, 0.625rem + 31.25vw, 320px);
+  }
+}
+@media (width <= 768px) {
+  .profit-calc {
+    gap: clamp(1.5rem, 4.17vw, 2rem);
+  }
+  .profit-info__button {
+    max-width: clamp(190px, 2.5rem + 26.04vw, 240px);
+  }
+}
+@media (width <= 576px) {
+  .profit {
+    padding-block: clamp(40px, -2.164rem + 19.9vw, 80px);
+  }
+  .profit__container {
+    gap: clamp(50px, -2.705rem + 24.88vw, 100px);
+  }
+  .profit-calc {
+    width: clamp(300px, 4.757rem + 59.7vw, 420px);
+  }
+  .profit-calc__label {
+    font-size: clamp(13px, 0.113rem + 2.99vw, 19px);
+  }
+  .profit-calc__value {
+    --value-size: clamp(30px, 0.476rem + 5.97vw, 42px);
+    margin-bottom: 10px;
+  }
+  .profit-calc__badge {
+    margin-bottom: clamp(16px, 0.3rem + 2.99vw, 22px);
+    font-size: clamp(12px, 0.633rem + 0.5vw, 13px);
+    padding: 4px clamp(12px, -0.183rem + 3.98vw, 20px);
+  }
+  .profit-calc__mode {
+    gap: clamp(13px, 0.463rem + 1.49vw, 16px);
+  }
+  .profit-calc__option {
+    gap: clamp(12px, 0.05rem + 2.99vw, 18px);
+  }
+  .profit-calc__radio {
+    --radio-size: clamp(1.25rem, 0.317rem + 3.98vw, 1.75rem);
+  }
+  .profit-calc__option-text {
+    font-size: clamp(0.813rem, 0.346rem + 1.99vw, 1.063rem);
+  }
+  .profit-info__description {
+    margin-bottom: clamp(25px, 0.047rem + 6.47vw, 38px);
+  }
+  .profit-info__button {
+    max-width: 100%;
+    height: 50px;
+  }
+}
+@media (width <= 400px) {
+  .profit-info__button {
+    height: 40px;
+  }
+}

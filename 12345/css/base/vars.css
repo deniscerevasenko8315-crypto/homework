@@ -36,9 +36,12 @@
   --orange-light: #ffb017;
   --orange-fill-hover: rgba(255, 137, 36, 0.12);
   --orange-glow-active: rgba(255, 137, 36, 0.45);
+  --green-hover: #82c36d26;
+
   /* active-color */
   --orange-fill-active: rgba(255, 137, 36, 0.22);
   --orange-glow-active: rgba(255, 137, 36, 0.3);
+  --green-active: #82c36d4d;
   /* container */
   --container-width: 1570px;
   --container-padding: 16px;

@@ -857,6 +857,384 @@
             </div>
           </div>
         </section>
+        <section class="profit">
+          <div class="container profit__container">
+            <form class="profit-calc" action="#" aria-label="Подбор портфеля">
+              <div class="profit-calc__gauge">
+                <svg
+                  class="profit-calc__arc"
+                  viewBox="0 0 500 260"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    class="profit-calc__arc-track"
+                    d="M 20 250 A 230 230 0 0 1 480 250"
+                  />
+                  <path
+                    class="profit-calc__arc-fill"
+                    d="M 20 250 A 230 230 0 0 1 480 250"
+                    pathLength="100"
+                  />
+                </svg>
+                <p class="profit-calc__label">Доходность</p>
+                <p
+                  class="profit-calc__value"
+                  id="profit-value"
+                  for="profit-risk"
+                >
+                  до 5%
+                </p>
+                <span class="profit-calc__badge" id="profit-badge"
+                  >Низкий риск</span
+                >
+              </div>
+              <input
+                class="profit-calc__range"
+                id="profit-risk"
+                type="range"
+                name="risk"
+                min="0"
+                max="100"
+                step="1"
+                value="30"
+                aria-label="Уровень риска"
+                aria-valuetext="Низкий риск"
+              />
+              <fieldset class="profit-calc__mode">
+                <label class="profit-calc__option">
+                  <input
+                    class="profit-calc__radio"
+                    type="radio"
+                    name="management"
+                    value="self"
+                    checked
+                  />
+                  <span class="profit-calc__option-text"
+                    >Управляю деньгами сам</span
+                  >
+                </label>
+                <label class="profit-calc__option">
+                  <input
+                    class="profit-calc__radio"
+                    type="radio"
+                    name="management"
+                    value="trust"
+                  />
+                  <span class="profit-calc__option-text"
+                    >Доверяю управление</span
+                  >
+                </label>
+              </fieldset>
+            </form>
+            <div class="profit-info">
+              <h2 class="profit-info__title main__title">
+                Подберите индивидуальный инвестиционный портфель
+              </h2>
+              <p class="profit-info__description title__opportunities">
+                Покупайте российские и иностранные акции, облигации, валюту и
+                другие продукты в простом и удобном мобильном приложении для iOS
+                и Android
+              </p>
+              <button class="active profit-info__button">
+                Получить портфель
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="result">
+          <div class="container">
+            <div class="result-investors">
+              <article class="result-investors__card">
+                <h3 class="result-investors__title">60 000</h3>
+                <p class="result-investors__description">Активных инвесторов</p>
+              </article>
+              <article class="result-investors__card">
+                <h3 class="result-investors__title">150+</h3>
+                <p class="result-investors__description">
+                  Торговых инструментов
+                </p>
+              </article>
+              <article class="result-investors__card">
+                <h3 class="result-investors__title">183 000 USD</h3>
+                <p class="result-investors__description">
+                  Финансовый результат одного из инвесторов
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="exchange">
+          <div class="container container__exchange">
+            <div class="exchange-text">
+              <h2 class="exchange-text__title">Инвестируйте с телефона</h2>
+              <p class="exchange-text__description">
+                Покупайте российские и иностранные акции, облигации, валюту и
+                другие продукты в простом и удобном мобильном приложении для iOS
+                и Android.
+              </p>
+            </div>
+            <picture class="exchange__logo">
+              <source srcset="./img/exchange/phon__decktop.avif" />
+              <img
+                class="exchange__img"
+                src="./img/exchange/phon__decktop.png"
+                alt="Два телефона с ноутбуком, на которых видны графики акций "
+              />
+            </picture>
+          </div>
+        </section>
+        <section class="iphone">
+          <div class="container container__iphone">
+            <picture class="iphone__logo">
+              <source srcset="./img/iphone/iphone-12.avif" type="image/avif" />
+              <img
+                class="iphone-invest__img"
+                src="./img/iphone/iphone-12.png"
+                alt="Телефон с нашем кошельком на нем "
+              />
+            </picture>
+            <div class="iphone-invest">
+              <h2 class="iphone-invest__title">Инвестируйте с&nbsp;телефона</h2>
+              <p class="iphone-invest__description">
+                Покупайте российские и иностранные акции, облигации, валюту и
+                другие продукты в простом и удобном мобильном приложении для iOS
+                и Android.
+              </p>
+              <div class="iphone-invest__link">
+                <a class="iphone-invest__link-phone" href="#"
+                  ><svg class="iphone-invest__icon" width="15px" height="19px">
+                    <use href="./icon/iphone/ios.svg#ios"></use></svg
+                  >Скачать для IOS</a
+                >
+                <a class="iphone-invest__link-phone" href="#"
+                  ><svg class="iphone-invest__icon" width="18px" height="19px">
+                    <use href="./icon/iphone/android.svg#android"></use></svg
+                  >Скачать для Android
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="faq">
+          <div class="container faq__container">
+            <div class="faq-text">
+              <h2 class="faq-text__title main__title">Мне только спросить</h2>
+              <p class="faq-text__description main__description">
+                Собрали в подсказках ответы на популярные вопросы об инвестициях
+                и сервисе
+              </p>
+            </div>
+            <div class="faq-list">
+              <details class="faq-list__details" name="faq" open>
+                <summary class="faq-list__title">
+                  Есть ли плата за обслуживание?
+                </summary>
+                <p class="faq-list__description">
+                  Далеко-далеко за словесными горами в стране гласных, и
+                  согласных живут рыбные тексты. Это сих пунктуация, свое даль
+                  собрал путь? Взобравшись, имеет подпоясал.
+                </p>
+              </details>
+              <details class="faq-list__details" name="faq" open>
+                <summary class="faq-list__title">
+                  Как вывести деньги со счёта?
+                </summary>
+                <p class="faq-list__description">
+                  Далеко-далеко за словесными горами в стране гласных, и
+                  согласных живут рыбные тексты. Это сих пунктуация, свое даль
+                  собрал путь? Взобравшись, имеет подпоясал.
+                </p>
+              </details>
+              <details class="faq-list__details" name="faq" open>
+                <summary class="faq-list__title">Какие налоги?</summary>
+                <p class="faq-list__description">
+                  Далеко-далеко за словесными горами в стране гласных, и
+                  согласных живут рыбные тексты. Это сих пунктуация, свое даль
+                  собрал путь? Взобравшись, имеет подпоясал.
+                </p>
+              </details>
+              <details class="faq-list__details" name="faq" open>
+                <summary class="faq-list__title">Где хранятся деньги?</summary>
+                <p class="faq-list__description">
+                  Далеко-далеко за словесными горами в стране гласных, и
+                  согласных живут рыбные тексты. Это сих пунктуация, свое даль
+                  собрал путь? Взобравшись, имеет подпоясал.
+                </p>
+              </details>
+              <details class="faq-list__details" name="faq" open>
+                <summary class="faq-list__title">Как открыть счёт?</summary>
+                <p class="faq-list__description">
+                  Далеко-далеко за словесными горами в стране гласных, и
+                  согласных живут рыбные тексты. Это сих пунктуация, свое даль
+                  собрал путь? Взобравшись, имеет подпоясал.
+                </p>
+              </details>
+              <details class="faq-list__details" name="faq" open>
+                <summary class="faq-list__title">Как пополнить счёт?</summary>
+                <p class="faq-list__description">
+                  Далеко-далеко за словесными горами в стране гласных, и
+                  согласных живут рыбные тексты. Это сих пунктуация, свое даль
+                  собрал путь? Взобравшись, имеет подпоясал.
+                </p>
+              </details>
+              <details class="faq-list__details" name="faq" open>
+                <summary class="faq-list__title">Что купить?</summary>
+                <p class="faq-list__description">
+                  Далеко-далеко за словесными горами в стране гласных, и
+                  согласных живут рыбные тексты. Это сих пунктуация, свое даль
+                  собрал путь? Взобравшись, имеет подпоясал.
+                </p>
+              </details>
+            </div>
+            <button class="active faq__button">Получить консультацию</button>
+          </div>
+        </section>
+        <section class="application">
+          <div class="container container-application">
+            <h2 class="application__title main__title">
+              Оставьте заявку на открытие счёта
+            </h2>
+            <ol class="application-info">
+              <li class="application-info__card">
+                <div class="application-info__tile" data-step="1">
+                  <svg
+                    class="application-info__icon"
+                    viewBox="0 0 44 44"
+                    width="40"
+                    height="40"
+                    aria-hidden="true"
+                  >
+                    <use href="./icon/application/document.svg#document"></use>
+                  </svg>
+                </div>
+                <h3 class="application-info__card-title">
+                  Заполните заявку <br />онлайн
+                </h3>
+                <p class="application-info__card-description">
+                  Необходимо: имя, номер телефона, e-mail и пароль для входа.
+                </p>
+              </li>
+              <li class="application-info__card">
+                <div
+                  class="application-info__tile application-info__tile--green"
+                  data-step="2"
+                >
+                  <svg
+                    class="application-info__icon"
+                    viewBox="0 0 48 48"
+                    width="40"
+                    height="40"
+                    aria-hidden="true"
+                  >
+                    <use href="./icon/application/card.svg#card"></use>
+                  </svg>
+                </div>
+                <h3 class="application-info__card-title">
+                  Откроем счет <br />за 5 минут
+                </h3>
+                <p class="application-info__card-description">
+                  Вы можете использовать несколько платежных систем для
+                  пополнения депозита, включая систему MidexPay и кошелек
+                  Bitcoin.
+                </p>
+              </li>
+              <li class="application-info__card">
+                <div
+                  class="application-info__tile application-info__tile--green"
+                  data-step="3"
+                >
+                  <svg
+                    class="application-info__icon"
+                    viewBox="0 0 40 40"
+                    width="40"
+                    height="40"
+                    aria-hidden="true"
+                  >
+                    <use href="./icon/application/dolar1.svg#dolar"></use>
+                  </svg>
+                </div>
+                <h3 class="application-info__card-title">
+                  Пополните счёт <br />и начните инвестировать
+                </h3>
+                <p class="application-info__card-description">
+                  Сразу после пополнения депозита будет доступна торговля через
+                  веб-терминал или мобильную платформу.
+                </p>
+              </li>
+            </ol>
+
+            <form class="application-filled">
+              <label class="application-filled__label">
+                <input
+                  class="application-filled__input"
+                  type="text"
+                  placeholder="Ваше Имя:"
+                  required
+                />
+              </label>
+              <label class="application-filled__label">
+                <span class="visually-hidden">Номер телефона</span>
+                <input
+                  class="application-filled__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="+7 --- --- -- --"
+                  required
+                />
+              </label>
+              <label class="application-filled__label">
+                <input
+                  class="application-filled__input"
+                  type="email"
+                  name="email"
+                  placeholder="Email:"
+                  required
+                />
+              </label>
+
+              <button class="application-filled__button active" type="submit">
+                Оставить заявку
+              </button>
+            </form>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="container container__footer">
+            <ol class="footer__list">
+              <li class="footer__item">
+                <a class="logo footer__logo" href="">
+                  <img
+                    class="logo__img"
+                    src="./icon/logo-combined.svg"
+                    width="52px"
+                    height="66px"
+                    alt="Логотип Leader classic"
+                  />
+                  <span class="logo__span"
+                    ><span>LEADER</span> <span>CLASSIC</span></span
+                  >
+                </a>
+                <a class="footer__network" href="#">
+                  <picture>
+                    <source srcset="./img/footer/network.avif" />
+                    <img
+                      class="footer__img"
+                      src="./img/footer/network.png"
+                      alt="Наши соцсети"
+                    />
+                  </picture>
+                </a>
+                <a class="footer__link" href="#">Политика передачи данных</a>
+              </li>
+              <li class="footer__item">
+                <p class="footer__description">Звонок по России бесплатный</p>
+                <span class="footer__number">8 (495) 212-16-71</span>
+                <button class="active footer__button">Перезвоните мне</button>
+              </li>
+            </ol>
+          </div>
+        </footer>
       </div>
     </main>
   </body>
