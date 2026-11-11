@@ -1,6 +1,7 @@
 .footer {
   padding-block: 80px;
   background-color: var(--main-card);
+  isolation: isolate;
 }
 .footer__list {
   display: flex;
